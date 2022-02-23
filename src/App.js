@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Article from "./components/Article.jsx";
+import Article from "./components/Article";
 
 function App() {
   const obj = {

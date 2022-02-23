@@ -1,16 +1,22 @@
-import { Title, Content } from "./index";
+import { useState } from "react";
+import { Title, Content, ChangePublishButton } from "./index";
 
 const Article = (props) => {
+  //Stateの使い方
+  const [isPublished, setIsPublished] = useState(false);
+  console.info(isPublished);
+  const changeIsPublish = () => {
+    setIsPublished(!isPublished);
+  };
   return (
     <div>
-      {/* <h2>{props.title}</h2>
-      <p>{props.content}</p>
-      <p>基礎ナンバーは{props.number}です</p>
-      <h4>オブジェクトの描画も可能です</h4>
-      <p>{props.obj.data1}</p>
-      <p>{props.obj.data2}</p> */}
       <Title img={props.img} title={props.title} />
       <Content content={props.content} />
+      <button onClick={changeIsPublish}>公開切り替え</button>
+      <ChangePublishButton
+        isPublished={isPublished}
+        changeIsPublish={changeIsPublish}
+      />
     </div>
   );
 };
