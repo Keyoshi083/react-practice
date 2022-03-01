@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Counter = () => {
   const [counter, setCounter] = useState(0);
@@ -13,6 +13,12 @@ const Counter = () => {
       return prevState - 1;
     });
   }
+
+  //useEffect学習
+  // 第二引数に[]を渡すことで、初回レンダリングのみ実行
+  useEffect(() => {
+    console.log("This count is :" + counter);
+  }, [counter]);
   return (
     <div>
       <button onClick={countUp}>CountUP</button>
