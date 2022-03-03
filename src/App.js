@@ -4,6 +4,7 @@ import Article from "./components/Article";
 import TextBox from "./components/TextBox";
 import Counter from "./components/Counter";
 import ToggleButton from "./components/ToggleButton";
+import GetUser from "./components/GetUser";
 
 function App() {
   const obj = {
@@ -21,9 +22,10 @@ function App() {
         img={logo}
       /> */}
       {/* useStateの使い方 */}
-      <TextBox />
+      {/* <TextBox />
       <Counter />
-      <ToggleButton />
+      <ToggleButton /> */}
+      <GetUser />
     </div>
   );
 }
