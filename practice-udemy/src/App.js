@@ -1,6 +1,7 @@
 import "./App.css";
 import { PrimaryButton } from "./components/atoms/button/PrimaryButton";
 import { SecondaryButton } from "./components/atoms/button/SecondaryButton";
+import { SearchInput } from "./components/molecules/SearchInput";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <PrimaryButton>テスト</PrimaryButton>
       <PrimaryButton>検索</PrimaryButton>
       <SecondaryButton>セカンダリー</SecondaryButton>
+      <SearchInput></SearchInput>
     </div>
   );
 }
